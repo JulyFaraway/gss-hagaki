@@ -145,7 +145,7 @@ class Hagaki
         // $this->first_name_offset = 55;
         // $this->suffix_offset     = 0;
         $size = 22;
-        $base_x = 55;
+        $base_x = 50;
         $base_y = 32;
         $suffix_y = 0; // 敬称の位置については、名前のうちもっとも長いものに揃える
         $this->tate1( $base_x, $base_y, $family_name, $size);
@@ -185,8 +185,9 @@ class Hagaki
      *
      * @param $address_1
      * @param $address_2
+     * @param $address_3
      */
-    public function address($address_1, $address_2)
+    public function address($address_1, $address_2,$address_3)
     {
 //        if ( $this->mb_tate_strlen($address_1) < 14 ) {
 //            $this->tate1(85, 25, $address_1, 19);
@@ -198,6 +199,9 @@ class Hagaki
 //        } else {
             $this->tate1(75, 25, $address_2, 12);
 //        }
+
+            $this->tate1(65, 25, $address_3, 14); // 役職名のつもり 14pt
+
     }
 
     /**

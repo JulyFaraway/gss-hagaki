@@ -188,7 +188,8 @@ class GSSHagaki
             $this->hagaki->zipcode($data['zipcode']);
             $this->hagaki->address(
                 $this->to_zenkaku($data['address_1']),
-                $this->to_zenkaku($data['address_2'])
+                $this->to_zenkaku($data['address_2']).
+                $this->to_zenkaku($data['address_3'])
             );
 
 
